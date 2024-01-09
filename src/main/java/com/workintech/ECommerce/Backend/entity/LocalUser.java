@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "local_user")
+@Table(name = "local_user", schema = "fsweb")
 public class LocalUser {
 
     @Id

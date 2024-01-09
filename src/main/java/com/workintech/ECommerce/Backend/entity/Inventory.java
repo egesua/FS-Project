@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "inventory")
+@Table(name = "inventory", schema = "fsweb")
 public class Inventory {
 
     @Id

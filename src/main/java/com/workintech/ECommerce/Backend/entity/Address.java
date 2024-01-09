@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "address")
+@Table(name = "address", schema = "fsweb")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address {
@@ -23,4 +23,8 @@ public class Address {
 
     @Column(name = "country", nullable = false)
     private String country;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    private LocalUser user;
 }

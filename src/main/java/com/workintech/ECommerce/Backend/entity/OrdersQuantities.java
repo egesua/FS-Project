@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "orders_quantities")
+@Table(name = "orders_quantities", schema = "fsweb")
 public class OrdersQuantities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

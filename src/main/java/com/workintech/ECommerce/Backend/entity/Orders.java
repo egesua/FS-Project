@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "orders")
+@Table(name = "orders", schema = "fsweb")
 public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +27,6 @@ public class Orders {
     @JoinColumn(name = "address_id", nullable = false)
     private Address address;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.REMOVE)
+    @OneToMany(cascade = CascadeType.REMOVE)
     private List<OrdersQuantities> quantities = new ArrayList<>();
 }
